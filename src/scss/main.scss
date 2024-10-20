@@ -166,6 +166,8 @@
 
   .preview-image {
     width: 100%;
+    height: 200px;
+    object-fit: fill;
   }
 
   .floating-icons {
@@ -259,6 +261,182 @@
   }
 }
 
+// pricing
+.pricing {
+  padding: 4rem 1rem;
+  background: radial-gradient(
+    circle at bottom,
+    rgba(255, 255, 255, 0.1),
+    $black-color,
+    $black-color
+  );
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: $white-color;
+
+  .section-marker {
+    box-shadow: none;
+    background-color: #101010;
+    border: 1px solid #101010;
+  }
+
+  .nav-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border: 0;
+    width: max-content;
+    background-color: #101010;
+
+    .nav-item {
+      .nav-link {
+        border-radius: 0;
+        color: $lightgray-color;
+
+        &.active {
+          color: $black-color;
+        }
+      }
+    }
+  }
+
+  // tab content
+
+  .tab-content {
+    .card {
+      background-color: #2e2e2e74;
+      color: $lightgray-color;
+      font-size: 0.9rem;
+      font-weight: 300;
+      height: 100%;
+
+      .card-footer {
+        border: 0;
+      }
+
+      h6 {
+        font-size: 1rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $white-color;
+
+        span {
+          font-size: 0.9rem;
+          color: $lightgray-color;
+          font-weight: 300;
+        }
+      }
+
+      .navbar-nav {
+        color: $white-color;
+        font-size: 1rem;
+        font-weight: 500;
+
+        .nav-item {
+          margin: 0.25rem 0;
+          font-size: 0.9rem;
+          color: $lightgray-color;
+          font-weight: 300;
+
+          i {
+            font-size: 1rem;
+            margin-right: 0.25rem;
+          }
+        }
+      }
+
+      .btn {
+        font-size: 0.9rem;
+        width: 100%;
+        background-color: #f1f1f164;
+        color: white;
+        margin-top: auto;
+
+        &:focus {
+          background-color: $black-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
+
+// testimonial
+.testimonial {
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  background-color: $white-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .card {
+    background-color: $white-color;
+    .review-star {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      i {
+        color: rgb(72, 0, 255);
+        margin-right: 0.5rem;
+      }
+
+      span {
+        font-size: 1rem;
+      }
+    }
+
+    .card-text {
+      font-size: 1rem;
+      font-weight: 300;
+      color: $black-color;
+    }
+
+    .card-footer {
+      border: 0;
+      background-color: $white-color;
+      .profil-user {
+        display: flex;
+        align-items: center;
+        .profil-image {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          overflow: hidden;
+          margin-right: 0.5rem;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+
+        .profil-name {
+          h6 {
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+          }
+          p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: #7e7e7e;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+}
+
 // responsive breakpoints
 @include respond-to(small) {
   .hero {
@@ -274,6 +452,10 @@
       .btn {
         margin: 0 0.5rem;
       }
+    }
+
+    .preview-image {
+      height: auto;
     }
   }
 }
@@ -450,6 +632,59 @@
         width: 100%;
         height: 50px;
         object-fit: cover;
+      }
+    }
+  }
+
+  .col-title {
+    font-size: 1rem;
+  }
+
+  .col-text {
+    font-size: 0.9rem;
+  }
+
+  // pricing
+  .pricing {
+    .nav-tabs {
+      margin: 0 0 0 auto;
+    }
+
+    .tab-content {
+      .card {
+        transition: 0.3s ease-in-out;
+        font-size: 0.8rem;
+
+        .navbar-nav {
+          font-size: 0.9rem;
+          .nav-item {
+            font-size: 0.8rem;
+          }
+        }
+        &:hover {
+          background-color: $white-color;
+          color: #101010;
+          transform: scale(1.05);
+          transition: 0.3s ease-in-out;
+
+          h3 {
+            color: $black-color;
+            span {
+              color: #101010;
+            }
+          }
+
+          .navbar-nav {
+            color: #101010;
+            .nav-item {
+              color: #101010;
+            }
+          }
+          .btn {
+            background-color: $black-color;
+            color: $white-color;
+          }
+        }
       }
     }
   }

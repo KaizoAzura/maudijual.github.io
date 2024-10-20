@@ -18,6 +18,18 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+
+    <!-- slick slider -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
   </head>
   <body>
     <!-- navbar -->
@@ -187,7 +199,7 @@
         <div class="row">
           <div class="col-12">
             <h4 class="section-marker">
-              <i class="ri-focus-2-fill"></i>Features
+              <i class="ri-drag-move-fill"></i>Features
             </h4>
             <h1 class="section-title my-lg-3">
               Everything Your Team Looking For
@@ -313,7 +325,7 @@
               </p>
             </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4 my-3 my-md-0">
+          <div class="col-12 col-md-6 col-lg-4 my-3 my-md-3 my-lg-0 mx-md-auto">
             <div class="card-benefit p-3">
               <img
                 src="dist/img/automatic.png"
@@ -332,9 +344,474 @@
     </section>
     <!-- end benefits -->
 
+    <!-- pricing -->
+    <section class="pricing container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="section-marker">
+              <i class="ri-wallet-line"></i>Pricing
+            </h4>
+            <h1 class="section-title my-3">Simple and Flexible Pricing</h1>
+
+            <!-- Tabs -->
+            <ul class="nav nav-tabs mt-5 mb-3" id="pricingTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link active"
+                  id="monthly-tab"
+                  data-bs-toggle="tab"
+                  href="#monthly"
+                  role="tab"
+                  aria-controls="monthly"
+                  aria-selected="true"
+                  >Monthly</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="annually-tab"
+                  data-bs-toggle="tab"
+                  href="#annually"
+                  role="tab"
+                  aria-controls="annually"
+                  aria-selected="false"
+                  >Annually</a
+                >
+              </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content my-4">
+              <div
+                class="tab-pane fade show active"
+                id="monthly"
+                role="tabpanel"
+                aria-labelledby="monthly-tab"
+              >
+                <div class="row">
+                  <div
+                    class="col-12 col-md-6 col-lg-4 my-2 my-lg-0 text-center"
+                  >
+                    <div class="card text-start">
+                      <div class="card-body">
+                        <h6>Personal</h6>
+                        <h3 class="price">
+                          $29<span class="small ms-1">per month</span>
+                        </h3>
+                        <p class="mb-5">
+                          For individuals and small teams looking to manage
+                          their tasks
+                        </p>
+
+                        <ul class="navbar-nav">
+                          This plan include :
+                          <li class="nav-item mt-3">
+                            <i class="ri-checkbox-circle-fill"></i>Unlimited
+                            contacts
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>Bulk emailing
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>AI
+                            integration
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>View and
+                            share up to 3 years
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i
+                            >Collaborations and permissions
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn">Get Started</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 col-lg-4 my-2 my-lg-0 text-center"
+                  >
+                    <div class="card text-start">
+                      <div class="card-body">
+                        <h6>Pro</h6>
+                        <h3 class="price">
+                          $39<span class="small ms-1">per month</span>
+                        </h3>
+                        <p class="mb-5">
+                          For growing teams that need to track their projects
+                          progress and hit deadlines
+                        </p>
+
+                        <ul class="navbar-nav">
+                          Everything in standart, Plus :
+                          <li class="nav-item mt-3">
+                            <i class="ri-checkbox-circle-fill"></i>Email
+                            Sequences
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>Send email
+                            from multiple domain
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>Connect
+                            multiple email account
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>Fully
+                            adjustable sharing permissions
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>Migration
+                            services
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn">Get Started</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 col-lg-4 my-2 my-lg-0 mx-md-auto text-center"
+                  >
+                    <div class="card text-start">
+                      <div class="card-body">
+                        <h6>Beyond limits</h6>
+                        <h3 class="price">Custom Plan</h3>
+                        <p class="mb-5">
+                          For companies that needs to manage a portfolio of work
+                          and goals
+                        </p>
+
+                        <ul class="navbar-nav">
+                          Everything in standart & Pro, plus :
+                          <li class="nav-item mt-3">
+                            <i class="ri-checkbox-circle-fill"></i>Unlimited
+                            contacts
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>Bulk emailing
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>AI
+                            integration
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>View and
+                            share up to 3 years
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i
+                            >Collaborations and permissions
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn">Get Started</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="annually"
+                role="tabpanel"
+                aria-labelledby="annually-tab"
+              >
+                <div class="row">
+                  <div
+                    class="col-12 col-md-6 col-lg-4 my-2 my-lg-0 text-center"
+                  >
+                    <div class="card text-start">
+                      <div class="card-body">
+                        <h6>Personal</h6>
+                        <h3 class="price">
+                          $290<span class="small ms-1">per year</span>
+                        </h3>
+                        <p class="mb-5">
+                          For individuals and small teams looking to manage
+                          their tasks
+                        </p>
+                        <ul class="navbar-nav">
+                          This plan includes:
+                          <li class="nav-item mt-3">
+                            <i class="ri-checkbox-circle-fill"></i>Unlimited
+                            contacts
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>Bulk emailing
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>AI
+                            integration
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>View and
+                            share up to 3 years
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i
+                            >Collaborations and permissions
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn">Get Started</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 col-lg-4 my-2 my-lg-0 text-center"
+                  >
+                    <div class="card text-start">
+                      <div class="card-body">
+                        <h6>Pro</h6>
+                        <h3 class="price">
+                          $390<span class="small ms-1">per year</span>
+                        </h3>
+                        <p class="mb-5">
+                          For growing teams that need to track their projects
+                          and hit deadlines
+                        </p>
+                        <ul class="navbar-nav">
+                          Everything in standard, Plus:
+                          <li class="nav-item mt-3">
+                            <i class="ri-checkbox-circle-fill"></i>Email
+                            Sequences
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>Send email
+                            from multiple domains
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>Connect
+                            multiple email accounts
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>Fully
+                            adjustable sharing permissions
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>Migration
+                            services
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn">Get Started</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 col-lg-4 my-2 my-lg-0 mx-md-auto text-center"
+                  >
+                    <div class="card text-start">
+                      <div class="card-body">
+                        <h6>Beyond limits</h6>
+                        <h3 class="price">Custom Plan</h3>
+                        <p class="mb-5">
+                          For companies managing a portfolio of work and goals
+                        </p>
+                        <ul class="navbar-nav">
+                          Everything in Standard & Pro, plus:
+                          <li class="nav-item mt-3">
+                            <i class="ri-checkbox-circle-fill"></i>Unlimited
+                            contacts
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>Bulk emailing
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>AI
+                            integration
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i>View and
+                            share up to 3 years
+                          </li>
+                          <li class="nav-item">
+                            <i class="ri-checkbox-circle-fill"></i
+                            >Collaborations and permissions
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="card-footer">
+                        <a href="#" class="btn">Get Started</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end pricing -->
+
+    <!-- testimonial -->
+    <section class="testimonial container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <h4 class="section-marker mx-auto">
+              <i class="ri-user-line"></i>Customers
+            </h4>
+            <h1 class="section-title my-4">See What Our Customer Are Saying</h1>
+            <p class="section-text">
+              Here's what some of our customers say about our platform
+            </p>
+          </div>
+        </div>
+        <!-- second row -->
+        <div class="row slider-container mt-4">
+          <div class="col-12 col-md-6 col-lg-4 my-md-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="review-star">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <span>4.8</span>
+                </div>
+                <p class="card-text">
+                  "Gantify has revolutionized the way we manage our projects.
+                  Connecting tasks and workflows to our overall company goals
+                  has never been easier"
+                </p>
+              </div>
+              <div class="card-footer">
+                <div class="profil-user">
+                  <div class="profil-image">
+                    <img src="dist/user-profil/img-1.jpg" alt="" />
+                  </div>
+
+                  <div class="profil-name">
+                    <h6>Charlotte Harlin</h6>
+                    <p>Co-Founder, Hermes Digital</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 my-md-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="review-star">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <span>4.8</span>
+                </div>
+                <p class="card-text">
+                  "Using Gantify has streamlined our projects management
+                  process. it's incridibly effective in aligning our daily tasks
+                  with the company's strategic goals."
+                </p>
+              </div>
+              <div class="card-footer">
+                <div class="profil-user">
+                  <div class="profil-image">
+                    <img src="dist/user-profil/img-2.jpg" alt="" />
+                  </div>
+
+                  <div class="profil-name">
+                    <h6>Eleanor Pena</h6>
+                    <p>Co-Founder, Heroes Digital</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 my-md-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="review-star">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <span>4.8</span>
+                </div>
+                <p class="card-text">
+                  "Gantify has revolutionized the way we manage our projects.
+                  Connecting tasks and workflows to our overall company goals
+                  has never been easier"
+                </p>
+              </div>
+              <div class="card-footer">
+                <div class="profil-user">
+                  <div class="profil-image">
+                    <img src="dist/user-profil/img-1.jpg" alt="" />
+                  </div>
+
+                  <div class="profil-name">
+                    <h6>Charlotte Harlin</h6>
+                    <p>Co-Founder, Hermes Digital</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 my-md-2">
+            <div class="card">
+              <div class="card-body">
+                <div class="review-star">
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <i class="ri-star-fill"></i>
+                  <span>4.8</span>
+                </div>
+                <p class="card-text">
+                  "Gantify has revolutionized the way we manage our projects.
+                  Connecting tasks and workflows to our overall company goals
+                  has never been easier"
+                </p>
+              </div>
+              <div class="card-footer">
+                <div class="profil-user">
+                  <div class="profil-image">
+                    <img src="dist/user-profil/img-1.jpg" alt="" />
+                  </div>
+
+                  <div class="profil-name">
+                    <h6>Charlotte Harlin</h6>
+                    <p>Co-Founder, Hermes Digital</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end testimonial -->
+
     <!-- script -->
     <!-- script bs -->
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- slick slider -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <!-- script vannila -->
     <script src="src/js/script.js"></script>
   </body>

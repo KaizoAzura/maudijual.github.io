@@ -194,6 +194,9 @@ body {
 }
 .hero .preview-image {
   width: 100%;
+  height: 200px;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .hero .floating-icons {
   display: none;
@@ -260,6 +263,150 @@ body {
   padding: 0.5rem;
 }
 
+.pricing {
+  padding: 4rem 1rem;
+  background: radial-gradient(circle at bottom, rgba(255, 255, 255, 0.1), #000000, #000000);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+.pricing .section-marker {
+  box-shadow: none;
+  background-color: #101010;
+  border: 1px solid #101010;
+}
+.pricing .nav-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 0;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #101010;
+}
+.pricing .nav-tabs .nav-item .nav-link {
+  border-radius: 0;
+  color: #d3d3d3;
+}
+.pricing .nav-tabs .nav-item .nav-link.active {
+  color: #000000;
+}
+.pricing .tab-content .card {
+  background-color: rgba(46, 46, 46, 0.4549019608);
+  color: #d3d3d3;
+  font-size: 0.9rem;
+  font-weight: 300;
+  height: 100%;
+}
+.pricing .tab-content .card .card-footer {
+  border: 0;
+}
+.pricing .tab-content .card h6 {
+  font-size: 1rem;
+}
+.pricing .tab-content .card h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+.pricing .tab-content .card h3 span {
+  font-size: 0.9rem;
+  color: #d3d3d3;
+  font-weight: 300;
+}
+.pricing .tab-content .card .navbar-nav {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.pricing .tab-content .card .navbar-nav .nav-item {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #d3d3d3;
+  font-weight: 300;
+}
+.pricing .tab-content .card .navbar-nav .nav-item i {
+  font-size: 1rem;
+  margin-right: 0.25rem;
+}
+.pricing .tab-content .card .btn {
+  font-size: 0.9rem;
+  width: 100%;
+  background-color: rgba(241, 241, 241, 0.3921568627);
+  color: white;
+  margin-top: auto;
+}
+.pricing .tab-content .card .btn:focus {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.testimonial {
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.testimonial .card {
+  background-color: #ffffff;
+}
+.testimonial .card .review-star {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.testimonial .card .review-star i {
+  color: rgb(72, 0, 255);
+  margin-right: 0.5rem;
+}
+.testimonial .card .review-star span {
+  font-size: 1rem;
+}
+.testimonial .card .card-text {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #000000;
+}
+.testimonial .card .card-footer {
+  border: 0;
+  background-color: #ffffff;
+}
+.testimonial .card .card-footer .profil-user {
+  display: flex;
+  align-items: center;
+}
+.testimonial .card .card-footer .profil-user .profil-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 0.5rem;
+}
+.testimonial .card .card-footer .profil-user .profil-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.testimonial .card .card-footer .profil-user .profil-name h6 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+.testimonial .card .card-footer .profil-user .profil-name p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: #7e7e7e;
+  font-weight: 300;
+}
+
 @media (min-width: 576px) {
   .hero .heading,
   .hero .text {
@@ -271,6 +418,9 @@ body {
   }
   .hero .btn-container .btn {
     margin: 0 0.5rem;
+  }
+  .hero .preview-image {
+    height: auto;
   }
 }
 @media (min-width: 768px) {
@@ -403,5 +553,46 @@ body {
     height: 50px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .col-title {
+    font-size: 1rem;
+  }
+  .col-text {
+    font-size: 0.9rem;
+  }
+  .pricing .nav-tabs {
+    margin: 0 0 0 auto;
+  }
+  .pricing .tab-content .card {
+    transition: 0.3s ease-in-out;
+    font-size: 0.8rem;
+  }
+  .pricing .tab-content .card .navbar-nav {
+    font-size: 0.9rem;
+  }
+  .pricing .tab-content .card .navbar-nav .nav-item {
+    font-size: 0.8rem;
+  }
+  .pricing .tab-content .card:hover {
+    background-color: #ffffff;
+    color: #101010;
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+  }
+  .pricing .tab-content .card:hover h3 {
+    color: #000000;
+  }
+  .pricing .tab-content .card:hover h3 span {
+    color: #101010;
+  }
+  .pricing .tab-content .card:hover .navbar-nav {
+    color: #101010;
+  }
+  .pricing .tab-content .card:hover .navbar-nav .nav-item {
+    color: #101010;
+  }
+  .pricing .tab-content .card:hover .btn {
+    background-color: #000000;
+    color: #ffffff;
   }
 }/*# sourceMappingURL=main.css.map */
