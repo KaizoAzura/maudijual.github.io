@@ -3,6 +3,11 @@
   font-size: 1rem;
   border-radius: 0;
   padding: 0.5rem 0.75rem;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: scale(0.95);
+  transition: 0.3s ease-in-out;
 }
 .btn.btn-gray {
   background-color: #363636;
@@ -31,12 +36,20 @@
 }
 
 /* Animation */
-@keyframes float {
+@keyframes float-r-to-l {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateX(-70px);
+  }
+}
+@keyframes float-l-to-r {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
   }
 }
 body {
@@ -45,6 +58,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #000000;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -57,13 +71,12 @@ body {
 }
 .navbar .navbar-toggler {
   border: 0;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #000000;
   padding: 0;
 }
 .navbar .navbar-toggler:focus {
   box-shadow: none;
-  border: 0;
   outline: none;
 }
 .navbar .offcanvas .offcanvas-body .navbar-nav .nav-item {
@@ -87,78 +100,89 @@ body {
 }
 
 .hero {
-  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   background: radial-gradient(circle at top, rgba(255, 255, 255, 0.1), #000000, #000000);
+  z-index: 4;
+  padding-top: 2rem;
+  position: relative;
 }
 .hero .cta-button {
   background-color: rgba(48, 48, 48, 0.5725490196);
   color: #ffffff;
   font-size: 0.9rem;
-  width: -moz-max-content;
-  width: max-content;
   padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-radius: 0.5rem;
-  z-index: 4;
 }
 .hero .cta-button .link-btn {
-  color: #ffffff;
   background-color: #363636;
   text-decoration: none;
+  color: #ffffff;
   width: 2rem;
   height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
   margin-left: 0.75rem;
   border-radius: 0.5rem;
 }
 .hero .heading {
   font-size: 3rem;
-  color: #ffffff;
   font-weight: 500;
-  z-index: 4;
+  color: #ffffff;
 }
 .hero .text {
   font-size: 1rem;
-  color: #d3d3d3;
   font-weight: 300;
-  z-index: 4;
+  color: #d3d3d3;
 }
 .hero .btn-container {
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
   width: 100%;
-  z-index: 4;
 }
 .hero .btn-container .btn {
-  font-size: 1rem;
+  font-size: 1em;
   font-weight: bold;
   padding: 0.5rem 1.25rem;
 }
 .hero .btn-container .btn.btn-white:hover {
   border: 1px solid #ffffff;
 }
+.hero .preview-image {
+  width: 100%;
+}
 .hero .floating-icons {
   display: none;
 }
 
+.trust {
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+}
+.trust .subheading h4 {
+  font-size: 1rem;
+  color: #8e8e8e;
+}
+.trust .teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trust .teams img {
+  width: 100%;
+  filter: grayscale(100);
+}
+
 @media (min-width: 576px) {
-  .hero .heading {
-    width: 90%;
-    margin: 1rem auto;
-  }
+  .hero .heading,
   .hero .text {
     width: 90%;
-    margin: 0 auto;
+    margin: 1rem auto;
   }
   .hero .btn-container {
     justify-content: center;
@@ -176,7 +200,6 @@ body {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1;
     transform: translate(0, 0);
   }
   .floating-icons .icon {
@@ -184,36 +207,43 @@ body {
     border-radius: 10px;
     padding: 0.5rem;
     position: absolute;
-    animation: float 10s infinite ease-in-out;
   }
   .floating-icons .icon.icon-1 {
     top: 20%;
     left: 10%;
+    animation: float-r-to-l 10s infinite ease-in-out;
   }
   .floating-icons .icon.icon-2 {
-    top: 50%;
+    top: 40%;
     left: 5%;
+    animation: float-l-to-r 10s infinite ease-in-out;
   }
   .floating-icons .icon.icon-3 {
-    top: 80%;
-    left: 7.5%;
+    display: none;
+    animation: float-r-to-l 10s infinite ease-in-out;
   }
   .floating-icons .icon.icon-4 {
     top: 25%;
     right: 10%;
+    animation: float-l-to-r 10s infinite ease-in-out;
   }
   .floating-icons .icon.icon-5 {
-    top: 55%;
+    top: 45%;
     right: 5%;
+    animation: float-r-to-l 10s infinite ease-in-out;
   }
   .floating-icons .icon.icon-6 {
-    top: 85%;
-    right: 7.5%;
+    display: none;
+    animation: float-l-to-r 10s infinite ease-in-out;
   }
   .floating-icons .icon img {
     width: 40px;
     height: 40px;
     filter: grayscale(100);
+  }
+  .trust .teams img {
+    width: 75%;
+    margin: auto;
   }
 }
 @media (min-width: 992px) {
@@ -234,7 +264,6 @@ body {
   .navbar .nav-btn .btn {
     font-size: 0.9rem;
     padding: 0.5rem 1.25rem;
-    box-sizing: border-box;
   }
   .hero .heading {
     width: 50%;
@@ -242,17 +271,49 @@ body {
   .hero .text {
     width: 60%;
   }
+  .hero .preview-image {
+    width: 80%;
+    margin: 1.5rem auto 0;
+    transition: width 0.5s ease;
+  }
+  .hero .floating-icons .icon.icon-1 {
+    top: 10%;
+    left: 10%;
+  }
   .hero .floating-icons .icon.icon-2 {
-    top: 50%;
-    left: 17.5%;
+    top: 30%;
+    left: 5%;
+  }
+  .hero .floating-icons .icon.icon-3 {
+    top: 42.5%;
+    left: 12.5%;
+    display: inline;
+  }
+  .hero .floating-icons .icon.icon-4 {
+    top: 15%;
+    right: 10%;
   }
   .hero .floating-icons .icon.icon-5 {
-    top: 55%;
-    right: 17.5%;
+    top: 30%;
+    right: 5%;
+  }
+  .hero .floating-icons .icon.icon-6 {
+    top: 42.5%;
+    right: 12.5%;
+    display: inline;
   }
   .hero .floating-icons .icon img {
     width: 40px;
     height: 40px;
-    filter: grayscale(100);
+  }
+  .trust p {
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+  .trust .teams img {
+    width: 100%;
+    height: 50px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,41 +1,43 @@
 // import
 @import "variable.scss";
 
-// style
-
 // navbar
 .navbar {
   background-color: $white-color;
   z-index: 999;
+
   .navbar-brand {
     font-weight: bold;
     font-size: 1.25rem;
   }
+
   .navbar-toggler {
     border: 0;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: $black-color;
     padding: 0;
+
     &:focus {
       box-shadow: none;
-      border: 0;
       outline: none;
     }
   }
 
-  //   offcanvas
   .offcanvas {
     .offcanvas-body {
       .navbar-nav {
         .nav-item {
           margin-bottom: 0.5rem;
+
           .nav-link {
             border-bottom: 1px solid transparent;
             color: $black-color;
             font-size: 1rem;
+
             &.btn {
               color: $white-color;
             }
+
             &.active {
               border-bottom: 1px solid $black-color;
             }
@@ -45,7 +47,6 @@
     }
   }
 
-  //   nav-btn
   .nav-btn {
     .btn {
       font-size: 0.9rem;
@@ -57,10 +58,8 @@
 
 // hero section
 .hero {
-  min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
   background: radial-gradient(
     circle at top,
@@ -68,28 +67,29 @@
     $black-color,
     $black-color
   );
+  z-index: 4;
+  padding-top: 2rem;
+  position: relative;
+
   .cta-button {
     background-color: #30303092;
     color: $white-color;
     font-size: 0.9rem;
-    width: max-content;
     padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 0.5rem;
-    z-index: 4;
 
     .link-btn {
-      color: $white-color;
       background-color: $gray-color;
       text-decoration: none;
+      color: $white-color;
       width: 2rem;
       height: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.5rem;
       margin-left: 0.75rem;
       border-radius: 0.5rem;
     }
@@ -97,60 +97,76 @@
 
   .heading {
     font-size: 3rem;
-    color: $white-color;
     font-weight: 500;
-    z-index: 4;
+    color: $white-color;
   }
 
   .text {
     font-size: 1rem;
-    color: $lightgray-color;
     font-weight: 300;
-    z-index: 4;
+    color: $lightgray-color;
   }
 
   .btn-container {
     display: flex;
-    align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    z-index: 4;
+
     .btn {
-      font-size: 1rem;
+      font-size: 1em;
       font-weight: bold;
       padding: 0.5rem 1.25rem;
-      &.btn-white {
-        &:hover {
-          border: 1px solid $white-color;
-        }
+
+      &.btn-white:hover {
+        border: 1px solid $white-color;
       }
     }
   }
 
-  //   floating icon
+  .preview-image {
+    width: 100%;
+  }
 
   .floating-icons {
     display: none;
   }
 }
 
-// responsive
+// trust section
+.trust {
+  background-color: $white-color;
+  padding: 2rem 1rem;
+  .subheading {
+    h4 {
+      font-size: 1rem;
+      color: $darkgray-color;
+    }
+  }
 
-// sm breakpoint
+  // teams
+  .teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      width: 100%;
+      filter: grayscale(100);
+    }
+  }
+}
+
+// responsive breakpoints
 @include respond-to(small) {
   .hero {
-    .heading {
+    .heading,
+    .text {
       width: 90%;
       margin: 1rem auto;
     }
 
-    .text {
-      width: 90%;
-      margin: 0 auto;
-    }
-
     .btn-container {
       justify-content: center;
+
       .btn {
         margin: 0 0.5rem;
       }
@@ -158,7 +174,6 @@
   }
 }
 
-// md breakpoint
 @include respond-to(medium) {
   .floating-icons {
     display: block !important;
@@ -168,7 +183,6 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1;
     transform: translate(0, 0);
 
     .icon {
@@ -176,32 +190,36 @@
       border-radius: 10px;
       padding: 0.5rem;
       position: absolute;
-      animation: float 10s infinite ease-in-out;
 
       &.icon-1 {
         top: 20%;
         left: 10%;
+        animation: float-r-to-l 10s infinite ease-in-out;
       }
       &.icon-2 {
-        top: 50%;
+        top: 40%;
         left: 5%;
+        animation: float-l-to-r 10s infinite ease-in-out;
       }
       &.icon-3 {
-        top: 80%;
-        left: 7.5%;
+        display: none;
+        animation: float-r-to-l 10s infinite ease-in-out;
       }
       &.icon-4 {
         top: 25%;
         right: 10%;
+        animation: float-l-to-r 10s infinite ease-in-out;
       }
       &.icon-5 {
-        top: 55%;
+        top: 45%;
         right: 5%;
+        animation: float-r-to-l 10s infinite ease-in-out;
       }
       &.icon-6 {
-        top: 85%;
-        right: 7.5%;
+        display: none;
+        animation: float-l-to-r 10s infinite ease-in-out;
       }
+
       img {
         width: 40px;
         height: 40px;
@@ -209,24 +227,34 @@
       }
     }
   }
+
+  .trust {
+    .teams {
+      img {
+        width: 75%;
+        margin: auto;
+      }
+    }
+  }
 }
 
-// lg breakpoint
 @include respond-to(large) {
-  // navbar
   .navbar {
     .offcanvas {
       .offcanvas-body {
         .navbar-nav {
           .nav-item {
             margin-bottom: 0;
+
             .nav-link {
               font-size: 0.8rem;
               margin-right: 0.5rem;
+
               &.btn {
                 font-size: 0.9rem;
                 padding: 0.5rem 0.75rem;
               }
+
               &:hover {
                 border-bottom: 1px solid $black-color;
               }
@@ -235,45 +263,78 @@
         }
       }
     }
+
     .nav-btn {
       .btn {
         font-size: 0.9rem;
         padding: 0.5rem 1.25rem;
-        box-sizing: border-box;
       }
     }
   }
 
-  //   hero
+  // hero
 
   .hero {
     .heading {
       width: 50%;
     }
-
     .text {
       width: 60%;
     }
 
-    // floating icon
+    .preview-image {
+      width: 80%;
+      margin: 1.5rem auto 0;
+      transition: width 0.5s ease;
+    }
 
     .floating-icons {
       .icon {
-        &.icon-2 {
-          top: 50%;
-          left: 17.5%;
+        &.icon-1 {
+          top: 10%;
+          left: 10%;
         }
-
+        &.icon-2 {
+          top: 30%;
+          left: 5%;
+        }
+        &.icon-3 {
+          top: 42.5%;
+          left: 12.5%;
+          display: inline;
+        }
+        &.icon-4 {
+          top: 15%;
+          right: 10%;
+        }
         &.icon-5 {
-          top: 55%;
-          right: 17.5%;
+          top: 30%;
+          right: 5%;
+        }
+        &.icon-6 {
+          top: 42.5%;
+          right: 12.5%;
+          display: inline;
         }
 
         img {
           width: 40px;
           height: 40px;
-          filter: grayscale(100);
         }
+      }
+    }
+  }
+
+  .trust {
+    p {
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+    .teams {
+      img {
+        width: 100%;
+        height: 50px;
+        object-fit: cover;
       }
     }
   }

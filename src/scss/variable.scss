@@ -37,7 +37,7 @@ $breakpoint-xxlarge: 1400px;
 $white-color: #ffffff;
 $black-color: #000000;
 $lightgray-color: #d3d3d3;
-$darkgray-color: #a9a9a9;
+$darkgray-color: #8e8e8e;
 $gray-color: #363636;
 
 // button
@@ -45,6 +45,12 @@ $gray-color: #363636;
   font-size: 1rem;
   border-radius: 0;
   padding: 0.5rem 0.75rem;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(0.95);
+    transition: 0.3s ease-in-out;
+  }
 
   &.btn-gray {
     background-color: $gray-color;
@@ -76,13 +82,23 @@ $gray-color: #363636;
 }
 
 /* Animation */
-@keyframes float {
+@keyframes float-r-to-l {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateX(-70px);
+  }
+}
+
+@keyframes float-l-to-r {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
   }
 }
 
@@ -94,4 +110,5 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: $black-color;
+  overflow-x: hidden;
 }

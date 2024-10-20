@@ -3,6 +3,11 @@
   font-size: 1rem;
   border-radius: 0;
   padding: 0.5rem 0.75rem;
+  transition: 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: scale(0.95);
+  transition: 0.3s ease-in-out;
 }
 .btn.btn-gray {
   background-color: #363636;
@@ -31,12 +36,20 @@
 }
 
 /* Animation */
-@keyframes float {
+@keyframes float-r-to-l {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateX(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateX(-70px);
+  }
+}
+@keyframes float-l-to-r {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100px);
   }
 }
 body {
@@ -45,4 +58,5 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #000000;
+  overflow-x: hidden;
 }/*# sourceMappingURL=variable.css.map */
