@@ -1,6 +1,47 @@
 // import
 @import "variable.scss";
 
+// default style
+.section-marker {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid $lightgray-color;
+  box-shadow: 0 0 10px 2px #f1f1f164;
+  width: max-content;
+  border-radius: 0.5rem;
+
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.section-text {
+  font-size: 1rem;
+  color: $gray-color;
+  font-weight: 300;
+}
+
+.col-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: $black-color;
+
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+.col-text {
+  font-size: 1rem;
+  font-weight: 300;
+  color: $gray-color;
+}
+
 // navbar
 .navbar {
   background-color: $white-color;
@@ -155,6 +196,69 @@
   }
 }
 
+// features section
+.features {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: $white-color;
+  padding: 4rem 1rem;
+  .img-container {
+    background: radial-gradient(
+      circle at top left,
+      rgba(203, 255, 255, 0.359),
+      rgba(144, 124, 144, 0.201)
+    );
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+
+    img {
+      border-radius: 0.25rem;
+    }
+  }
+}
+
+// benefits
+.benefits {
+  background-color: $white-color;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .col-md-6:nth-child(2) {
+    .card-benefit {
+      img {
+        background-color: $cyan-color;
+      }
+    }
+  }
+  .col-md-6:nth-child(3) {
+    .card-benefit {
+      img {
+        background-color: $green-color;
+      }
+    }
+  }
+
+  .col-md-6 {
+    .card-benefit {
+      border: 1px solid $lightgray-color;
+      border-radius: 0.5rem;
+
+      img {
+        width: 60px;
+        height: 60px;
+        background-color: $purple-color;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
 // responsive breakpoints
 @include respond-to(small) {
   .hero {
@@ -234,6 +338,17 @@
         width: 75%;
         margin: auto;
       }
+    }
+  }
+
+  // features
+  .features {
+    .col-title {
+      font-size: 1rem;
+    }
+
+    .col-text {
+      font-size: 0.9rem;
     }
   }
 }

@@ -61,6 +61,45 @@ body {
   overflow-x: hidden;
 }
 
+.section-marker {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #d3d3d3;
+  box-shadow: 0 0 10px 2px rgba(241, 241, 241, 0.3921568627);
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 0.5rem;
+}
+.section-marker i {
+  margin-right: 0.5rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.section-text {
+  font-size: 1rem;
+  color: #363636;
+  font-weight: 300;
+}
+
+.col-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000000;
+}
+.col-title i {
+  margin-right: 0.5rem;
+}
+
+.col-text {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #363636;
+}
+
 .navbar {
   background-color: #ffffff;
   z-index: 999;
@@ -178,6 +217,49 @@ body {
   filter: grayscale(100);
 }
 
+.features {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 4rem 1rem;
+}
+.features .img-container {
+  background: radial-gradient(circle at top left, rgba(203, 255, 255, 0.359), rgba(144, 124, 144, 0.201));
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+.features .img-container img {
+  border-radius: 0.25rem;
+}
+
+.benefits {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.benefits .col-md-6:nth-child(2) .card-benefit img {
+  background-color: #00ffff;
+}
+.benefits .col-md-6:nth-child(3) .card-benefit img {
+  background-color: #006e00;
+}
+.benefits .col-md-6 .card-benefit {
+  border: 1px solid #d3d3d3;
+  border-radius: 0.5rem;
+}
+.benefits .col-md-6 .card-benefit img {
+  width: 60px;
+  height: 60px;
+  background-color: #b400b4;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
 @media (min-width: 576px) {
   .hero .heading,
   .hero .text {
@@ -244,6 +326,12 @@ body {
   .trust .teams img {
     width: 75%;
     margin: auto;
+  }
+  .features .col-title {
+    font-size: 1rem;
+  }
+  .features .col-text {
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 992px) {
